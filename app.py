@@ -4,6 +4,7 @@ import json
 
 data = read_json("Klasbezetting.json")
 df = DataFrame(data)
+updated_df = df
 
 def update_df():
   updated_df = df.querry("Weekdag"==weekdag)
