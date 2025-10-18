@@ -1,6 +1,7 @@
 from streamlit import *
 from pandas import *
 import json
+from streamlit_dynamic_filters import DynamicFilters
 
 data = read_json("Klasbezetting.json")
 df = DataFrame(data)
@@ -35,7 +36,8 @@ lokaal = sidebar.multiselect(
   label = "Lokaal",
   options = df["Lokaal"].unique())
 
-
-
+dynamic_filters = DynamicFilters(df=df, filters=[datum, weekdag, lkr, lokaal])
+dynamic_filters.display_filters()
+dynamic_filters.display_df()
 
 dataframe(df)
