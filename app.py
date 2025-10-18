@@ -32,7 +32,7 @@ else:
 
 alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
 if alle_weekdagen:
-  weekdag = multiselect(options = df["Weekdag"].unique())
+  weekdag = sidebar.multiselect(options = df["Weekdag"].unique())
 else:
   weekdag = sidebar.multiselect(
     label = "Weekdag",
