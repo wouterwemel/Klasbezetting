@@ -31,7 +31,9 @@ else:
     value = "today")
 
 alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
-if not alle_weekdagen:
+if alle_weekdagen:
+  weekdag = multiselect(options = df["Weekdag"].unique())
+else:
   weekdag = sidebar.multiselect(
     label = "Weekdag",
     options = df["Weekdag"].unique())
@@ -45,6 +47,5 @@ lokaal = sidebar.multiselect(
   options = df["Lokaal"].unique())
 
 
-weekdag = df["Weekdag"].unique()
 updated_df = df.query("Weekdag == @weekdag")
 dataframe(updated_df)
