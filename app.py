@@ -12,6 +12,7 @@ set_page_config(page_title="Klasbezetting KADE",
 
 title = "Klasbezetting TEST TOOL"
 
+Sidebar.header("Instellingen")
 
 jaar = sidebar.selectbox(
   label = "jaar",
