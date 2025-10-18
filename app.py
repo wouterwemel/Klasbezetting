@@ -24,7 +24,10 @@ else:
     label = "jaar",
     options = df["Jaar"].unique())
 
-datum = sidebar.date_input()
+datum = sidebar.date_input(
+  label = "Datum",
+  formag = "DD/MM/YYYY"
+)
 
 
 maand = sidebar.multiselect(
