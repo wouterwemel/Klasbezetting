@@ -2,9 +2,15 @@ from streamlit import *
 from pandas import *
 import json
 
+# SET DATAFRAME
 data = read_json("Klasbezetting.json")
 df = DataFrame(data)
 updated_df = df
+
+# SET VARIABLES
+weekdag = df["Weekdag"].unique()
+
+
 
 
 set_page_config(page_title="Klasbezetting KADE",
@@ -25,9 +31,7 @@ else:
     value = "today")
 
 alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
-if alle_weekdagen:
-  weekdag = df["Weekdag"].unique()
-else:
+if not alle_weekdagen:
   weekdag = sidebar.multiselect(
     label = "Weekdag",
     options = df["Weekdag"].unique())
