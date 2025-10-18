@@ -1,8 +1,9 @@
 from streamlit import *
 from pandas import *
+import json
 
-df = read_excel("Klasbzetting KADE - 2025-2026.xlsx")
-df_selection = df
+df_excel = read_excel("Klasbzetting KADE - 2025-2026.xlsx")
+df_json = data.to_json()
 
 set_page_config(page_title="Klasbezetting KADE",
                 page_icon=":bar_chart:",
@@ -11,4 +12,4 @@ set_page_config(page_title="Klasbezetting KADE",
 title = "Klasbezetting TEST TOOL"
 
 
-dataframe(df)
+dataframe(df_json)
