@@ -8,7 +8,7 @@ df = DataFrame(data)
 updated_df = df
 
 # SET VARIABLES
-# weekdag = df["Weekdag"].unique()
+
 
 
 
@@ -45,6 +45,6 @@ lokaal = sidebar.multiselect(
   options = df["Lokaal"].unique())
 
 
-
+weekdag = df["Weekdag"].unique()
 updated_df = df.query("Weekdag == @weekdag")
 dataframe(updated_df)
