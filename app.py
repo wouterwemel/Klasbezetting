@@ -6,8 +6,6 @@ data = read_json("Klasbezetting.json")
 df = DataFrame(data)
 updated_df = df
 
-def update_df():
-  updated_df = df.query("Weekdag == @weekdag")
 
 set_page_config(page_title="Klasbezetting KADE",
                 page_icon=":bar_chart:",
@@ -41,5 +39,7 @@ lokaal = sidebar.multiselect(
   options = df["Lokaal"].unique())
 
 
+def update_df():
+  updated_df = df.query("Weekdag == @weekdag")
 
 dataframe(updated_df)
