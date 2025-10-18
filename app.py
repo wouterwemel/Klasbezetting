@@ -26,8 +26,7 @@ else:
 
 weekdag = sidebar.multiselect(
   label = "Weekdag",
-  options = df["Weekdag"].unique(),
-  on_change = update_df()
+  options = df["Weekdag"].unique()
   )
 
 lkr = sidebar.multiselect(
@@ -39,7 +38,6 @@ lokaal = sidebar.multiselect(
   options = df["Lokaal"].unique())
 
 
-def update_df():
-  updated_df = df.query("Weekdag == @weekdag")
 
+updated_df = df.query("Weekdag == @weekdag")
 dataframe(updated_df)
