@@ -11,8 +11,9 @@ set_page_config(page_title="Klasbezetting KADE",
 
 title = "Klasbezetting TEST TOOL"
 
-data = sidebar.select(
-  label = "Data")
+jaar = sidebar.multiselect(
+  label = "Data",
+  options = df[jaar].unique())
 
 
 
