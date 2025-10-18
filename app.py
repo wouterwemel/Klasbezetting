@@ -23,7 +23,6 @@ lokaal = sidebar.multiselect(
   label = "Lokaal",
   options = sorted(df["Lokaal"].unique()))
 
-with 
 
 
 
