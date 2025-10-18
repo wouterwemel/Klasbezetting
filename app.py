@@ -13,7 +13,7 @@ set_page_config(page_title="Klasbezetting KADE",
 title = "Klasbezetting TEST TOOL"
 
 
-jaar = sidebar.multiselect(
+jaar = sidebar.selectionbox(
   label = "jaar",
   options = df["Jaar"].unique())
 
