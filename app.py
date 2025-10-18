@@ -14,29 +14,17 @@ title = "Klasbezetting TEST TOOL"
 
 sidebar.header("Instellingen")
 
-alle_jaren = sidebar.toggle(
-  label = "alle jaren",
-  value = True)
-if alle_jaren:
+alle_data = sidebar.toggle(
+  label = "Alle data",
+  value = True
+)
+if alle_data:
   pass
 else:
-  jaar = sidebar.multiselect(
-    label = "jaar",
-    options = df["Jaar"].unique())
-
-datum = sidebar.date_input(
-  label = "Datum",
-  format = "DD/MM/YYYY"
-)
-
-
-maand = sidebar.multiselect(
-  label = "Maand",
-  options = df["Maand"].unique())
-
-dag = sidebar.multiselect(
-  label = "Dag",
-  options = df["Dag"].unique())
+  datum = sidebar.date_input(
+    label = "Datum",
+    format = "DD/MM/YYYY"
+  )
 
 weekdag = sidebar.multiselect(
   label = "Weekdag",
