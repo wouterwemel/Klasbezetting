@@ -11,5 +11,9 @@ set_page_config(page_title="Klasbezetting KADE",
 
 title = "Klasbezetting TEST TOOL"
 
+data = sidebar.toggle(
+  label = "Data")
+
+
 
 dataframe(df)
