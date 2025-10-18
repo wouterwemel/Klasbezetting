@@ -8,7 +8,7 @@ df = DataFrame(data)
 updated_df = df
 
 # SET VARIABLES
-weekdag = df["Weekdag"].unique()
+# weekdag = df["Weekdag"].unique()
 
 
 
