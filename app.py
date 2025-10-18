@@ -11,7 +11,7 @@ set_page_config(page_title="Klasbezetting KADE",
 
 title = "Klasbezetting TEST TOOL"
 
-data = sidebar.toggle(
+data = sidebar.select(
   label = "Data")
 
 
