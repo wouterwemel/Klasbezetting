@@ -22,10 +22,10 @@ else:
     label = "Datum",
     format = "DD/MM/YYYY")
 
-weekdag_options = list(df["Weekdag"].unique())
+weekdag_options = list(df["Weekdag"].unique()).sort()
 weekdag = sidebar.multiselect(
   label = "Weekdag",
-  options = weekdag_options.sort())
+  options = weekdag_options)
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
