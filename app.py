@@ -29,7 +29,7 @@ weekdag = sidebar.multiselect(
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
-  options = df["Leerkracht(en)"].unique().sort())
+  options = df["Leerkracht(en)"].unique())
 
 lokaal = sidebar.multiselect(
   label = "Lokaal",
