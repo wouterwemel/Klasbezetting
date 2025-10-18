@@ -12,6 +12,8 @@ set_page_config(page_title="Klasbezetting KADE",
 
 title = "Klasbezetting TEST TOOL"
 
+jaar_unique = df["Jaar"].unique()
+jaar_sorted = jaar_unique.sort_values()
 jaar = sidebar.multiselect(
   label = "jaar",
   options = df["Jaar"].sort_values()
