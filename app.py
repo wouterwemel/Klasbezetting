@@ -18,6 +18,18 @@ jaar = sidebar.selectbox(
   label = "jaar",
   options = df["Jaar"].unique())
 
+maand = sidebar.multiselect(
+  label = "Maand",
+  options = df["Maand"].unique())
+
+dag = sidebar.multiselect(
+  label = "Dag",
+  options = df["Dag"].unique())
+
+weekdag = sidebar.multiselect(
+  label = "Weekdag",
+  options = df["Weekdag"].unique())
+
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
   options = df["Leerkracht(en)"].unique())
