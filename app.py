@@ -34,7 +34,7 @@ alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
 if not alle_weekdagen:
   weekdag = sidebar.selectbox(
     label = "Weekdag",
-    options = sort(df["Weekdag"].unique()))
+    options = list(df["Weekdag"].unique())).sort()
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
