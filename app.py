@@ -23,6 +23,7 @@ else:
     format = "DD/MM/YYYY")
 
 weekdag_options = list(df["Weekdag"].unique()).sort()
+print(weekdag_options)
 weekdag = sidebar.multiselect(
   label = "Weekdag",
   options = weekdag_options)
