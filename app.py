@@ -15,7 +15,7 @@ title = "Klasbezetting TEST TOOL"
 
 jaar = sidebar.multiselect(
   label = "jaar",
-  options = df["Jaar"].sorted())
+  options = df["Jaar"].sort_values())
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
