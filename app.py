@@ -14,11 +14,11 @@ title = "Klasbezetting TEST TOOL"
 
 sidebar.header("Selecteer")
 
-alle_data = sidebar.toggle(label = "Alle data", value = True)
+alle_data = toggle(label = "Alle data", value = True)
 if alle_data:
   pass
 else:
-  datum = sidebar.date_input(
+  datum = date_input(
     label = "Datum",
     format = "DD/MM/YYYY",
     value = "today")
