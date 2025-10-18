@@ -2,7 +2,8 @@ from streamlit import *
 from pandas import *
 import json
 
-df = read_json("Klasbezetting.json")
+data = read_json("Klasbezetting.json")
+df = DataFrame(data)
 
 
 set_page_config(page_title="Klasbezetting KADE",
