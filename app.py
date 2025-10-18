@@ -20,7 +20,8 @@ if alle_data:
 else:
   datum = sidebar.date_input(
     label = "Datum",
-    format = "DD/MM/YYYY")
+    format = "DD/MM/YYYY",
+    value = "today")
 
 weekdag_options = df["Weekdag"].unique()
 print(weekdag_options)
