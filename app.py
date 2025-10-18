@@ -14,9 +14,15 @@ title = "Klasbezetting TEST TOOL"
 
 sidebar.header("Instellingen")
 
-jaar = sidebar.multiselect(
-  label = "jaar",
-  options = df["Jaar"].unique())
+alle_jaren = sidebar.toggle(
+  label = "alle jaren",
+  value = True)
+if alle jaren:
+  pass
+else:
+  jaar = sidebar.multiselect(
+    label = "jaar",
+    options = df["Jaar"].unique())
 
 maand = sidebar.multiselect(
   label = "Maand",
