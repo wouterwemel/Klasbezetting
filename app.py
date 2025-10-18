@@ -17,7 +17,7 @@ jaar = sidebar.multiselect(
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
-  options = sorted.(df["Leerkracht(en)"].unique()))
+  options = sorted(df["Leerkracht(en)"].unique()))
 
 lokaal = sidebar.multiselect(
   label = "Lokaal",
