@@ -19,7 +19,7 @@ lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
   options = df["Leerkracht(en)"].unique())
 
- lokaal = sidebar.multiselect(
+lokaal = sidebar.multiselect(
   label = "Lokaal",
   options = df["Lokaal"].unique())
 
