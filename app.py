@@ -7,8 +7,6 @@ import json
 data = read_json("Klasbezetting.json")
 df = DataFrame(data)
 
-def update_df():
-  df["Weekdag"] = weekdag
 
 set_page_config(page_title="Klasbezetting KADE",
                 page_icon=":bar_chart:",
@@ -29,8 +27,8 @@ else:
 
 weekdag = sidebar.multiselect(
   label = "Weekdag",
-  options = df["Weekdag"].unique(),
-  on_change = update_df())
+  options = df["Weekdag"].unique()
+  )
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
