@@ -14,7 +14,7 @@ title = "Klasbezetting TEST TOOL"
 
 sidebar.header("Instellingen")
 
-jaar = sidebar.selectbox(
+jaar = sidebar.multiselect(
   label = "jaar",
   options = df["Jaar"].unique())
 
