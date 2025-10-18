@@ -38,4 +38,4 @@ lokaal = sidebar.multiselect(
 
 
 
-dataframe(df["Weekdag"]==weekdag)
+dataframe(df["Weekdag"])
