@@ -2,17 +2,12 @@ from streamlit import *
 from pandas import *
 import json
 
-# SET DATAFRAME
+# SETUP DATAFRAME
 data = read_json("Klasbezetting.json")
 df = DataFrame(data)
 updated_df = df
 
-# SET VARIABLES
-
-
-
-
-
+# SETUP APP
 set_page_config(page_title="Klasbezetting KADE",
                 page_icon=":bar_chart:",
                 layout="wide")
@@ -21,9 +16,10 @@ title = "Klasbezetting TEST TOOL"
 
 sidebar.header("Selecteer")
 
+# SETUP SETTINGS
 alle_data = toggle(label = "Alle data", value = True)
 if alle_data:
-  pass
+  datum = list(df["Datum"].unique())
 else:
   datum = date_input(
     label = "Datum",
@@ -47,5 +43,5 @@ lokaal = sidebar.multiselect(
   options = df["Lokaal"].unique())
 
 
-updated_df = df.query("Weekdag == @weekdag")
+updated_df = df.query("Datum == @Datum & Weekdag == @weekdag")
 dataframe(updated_df)
