@@ -2,7 +2,7 @@ from streamlit import *
 from pandas import *
 import json
 
-df = read_json("Klasbzetting.json")
+df = read_json("Klasbezetting.json")
 
 
 set_page_config(page_title="Klasbezetting KADE",
