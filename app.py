@@ -34,14 +34,22 @@ else:
     label = "Weekdag",
     options = df["Weekdag"].unique())
 
-lkr = sidebar.multiselect(
-  label = "Leerkracht(en)",
-  options = df["Leerkracht(en)"].unique())
+alle_lkr = sidebar.toggle(label = "Alle leerkrachten", value = True)
+if alle_lkr:
+  lkr = list(df["Leerkracht(en)"].unique())
+else:
+  lkr = sidebar.multiselect(
+    label = "Leerkracht(en)",
+    options = df["Leerkracht(en)"].unique())
 
-lokaal = sidebar.multiselect(
-  label = "Lokaal",
-  options = df["Lokaal"].unique())
+alle_lokalen = sidebar.toggle(label = "Alle lokalen", value = True)
+if alle_lokalen:
+  lokaal = list(df["Lokaal"].unique())
+else:
+  lokaal = sidebar.multiselect(
+    label = "Lokaal",
+    options = df["Lokaal"].unique())
 
 
-updated_df = df.query("Datum == @datum & Weekdag == @weekdag")
+updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht(en) == @lkr & Lokaal == @lokaal")
 dataframe(updated_df)
