@@ -1,6 +1,5 @@
 from streamlit import *
 from pandas import *
-import sorted
 import json
 
 df = read_json("Klasbezetting.json")
