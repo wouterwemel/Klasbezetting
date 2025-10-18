@@ -14,21 +14,18 @@ title = "Klasbezetting TEST TOOL"
 
 sidebar.header("Instellingen")
 
-alle_data = sidebar.toggle(
-  label = "Alle data",
-  value = True
-)
+alle_data = sidebar.toggle(label = "Alle data", value = True)
 if alle_data:
   pass
 else:
   datum = sidebar.date_input(
     label = "Datum",
-    format = "DD/MM/YYYY"
-  )
+    format = "DD/MM/YYYY")
 
+weekdag_options = df["Weekdag"].unique()
 weekdag = sidebar.multiselect(
   label = "Weekdag",
-  options = df["Weekdag"].unique())
+  options = weekdag_options.sort())
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
