@@ -23,11 +23,9 @@ else:
     format = "DD/MM/YYYY",
     value = "today")
 
-weekdag_options = df["Weekdag"].unique()
-print(weekdag_options)
 weekdag = sidebar.multiselect(
   label = "Weekdag",
-  options = weekdag_options)
+  options = df["Weekdag"].unique())
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
@@ -40,4 +38,4 @@ lokaal = sidebar.multiselect(
 
 
 
-# dataframe(df)
+dataframe(df["Weekdag"]=weekdag)
