@@ -16,7 +16,7 @@ jaar_unique = df["Jaar"].unique()
 jaar_sorted = jaar_unique.sort_values()
 jaar = sidebar.multiselect(
   label = "jaar",
-  options = df["Jaar"].sort_values()
+  options = jaar_sorted
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
