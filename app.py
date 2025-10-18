@@ -1,7 +1,6 @@
 from streamlit import *
 from pandas import *
 import json
-from streamlit_dynamic_filters import DynamicFilters
 
 data = read_json("Klasbezetting.json")
 df = DataFrame(data)
@@ -13,7 +12,7 @@ set_page_config(page_title="Klasbezetting KADE",
 
 title = "Klasbezetting TEST TOOL"
 
-sidebar.header("Instellingen")
+sidebar.header("Selecteer")
 
 alle_data = sidebar.toggle(label = "Alle data", value = True)
 if alle_data:
@@ -36,8 +35,5 @@ lokaal = sidebar.multiselect(
   label = "Lokaal",
   options = df["Lokaal"].unique())
 
-dynamic_filters = DynamicFilters(df=df, filters=[datum, weekdag, lkr, lokaal])
-dynamic_filters.display_filters()
-dynamic_filters.display_df()
 
 dataframe(df)
