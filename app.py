@@ -24,11 +24,14 @@ else:
     format = "DD/MM/YYYY",
     value = "today")
 
-weekdag = sidebar.multiselect(
-  label = "Weekdag",
-  options = df["Weekdag"].unique(),
-  default = df["Weekdag"].unique()
-  )
+alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
+if alle_weekdagen:
+  pass
+else:
+  weekdag = sidebar.multiselect(
+    label = "Weekdag",
+    options = df["Weekdag"].unique(),
+    default = df["Weekdag"].unique())
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
