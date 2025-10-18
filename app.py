@@ -17,7 +17,7 @@ sidebar.header("Instellingen")
 alle_jaren = sidebar.toggle(
   label = "alle jaren",
   value = True)
-if alle jaren:
+if alle_jaren:
   pass
 else:
   jaar = sidebar.multiselect(
