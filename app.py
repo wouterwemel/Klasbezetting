@@ -43,5 +43,5 @@ lokaal = sidebar.multiselect(
   options = df["Lokaal"].unique())
 
 
-updated_df = df.query("Datum == @Datum & Weekdag == @weekdag")
+updated_df = df.query("Datum == @datum & Weekdag == @weekdag")
 dataframe(updated_df)
