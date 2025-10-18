@@ -24,6 +24,9 @@ else:
     label = "jaar",
     options = df["Jaar"].unique())
 
+datum = sidebar.date_input()
+
+
 maand = sidebar.multiselect(
   label = "Maand",
   options = df["Maand"].unique())
