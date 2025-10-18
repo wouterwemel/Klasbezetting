@@ -28,7 +28,8 @@ else:
 
 weekdag = sidebar.multiselect(
   label = "Weekdag",
-  options = df["Weekdag"].unique()
+  options = df["Weekdag"].unique(),
+  on_change = update_df()
   )
 
 lkr = sidebar.multiselect(
