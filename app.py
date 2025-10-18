@@ -40,4 +40,4 @@ lokaal = sidebar.multiselect(
 
 
 
-dataframe(df)
+# dataframe(df)
