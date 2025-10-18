@@ -6,7 +6,7 @@ data = read_json("Klasbezetting.json")
 df = DataFrame(data)
 
 def update_df():
-  updated_df = df.querry("Weekdag"==@weekdag)
+  updated_df = df.querry("Weekdag"==weekdag)
 
 set_page_config(page_title="Klasbezetting KADE",
                 page_icon=":bar_chart:",
