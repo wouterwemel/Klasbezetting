@@ -13,15 +13,18 @@ title = "Klasbezetting TEST TOOL"
 
 jaar = sidebar.multiselect(
   label = "jaar",
-  options = df["Jaar"].unique())
+  options = sorted(df["Jaar"].unique()))
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
-  options = df["Leerkracht(en)"].unique())
+  options = sorted.(df["Leerkracht(en)"].unique()))
 
 lokaal = sidebar.multiselect(
   label = "Lokaal",
-  options = df["Lokaal"].unique())
+  options = sorted(df["Lokaal"].unique()))
+
+with 
+
 
 
 dataframe(df)
