@@ -16,15 +16,15 @@ jaar_unique = df["Jaar"].unique()
 jaar_sorted = jaar_unique.sort_values()
 jaar = sidebar.multiselect(
   label = "jaar",
-  options = jaar_sorted
+  options = jaar_sorted)
 
 lkr = sidebar.multiselect(
   label = "Leerkracht(en)",
-  options = df["Leerkracht(en)"].unique()
+  options = df["Leerkracht(en)"].unique())
 
 lokaal = sidebar.multiselect(
   label = "Lokaal",
-  options = df["Lokaal"].unique()
+  options = df["Lokaal"].unique())
 
 
 
