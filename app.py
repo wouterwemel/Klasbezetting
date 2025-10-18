@@ -13,7 +13,7 @@ title = "Klasbezetting TEST TOOL"
 
 jaar = sidebar.multiselect(
   label = "Data",
-  options = df["jaar"].unique())
+  options = df["Jaar"].unique())
 
 
 
