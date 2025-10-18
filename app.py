@@ -26,7 +26,7 @@ else:
 
 datum = sidebar.date_input(
   label = "Datum",
-  formag = "DD/MM/YYYY"
+  format = "DD/MM/YYYY"
 )
 
 
