@@ -34,11 +34,11 @@ else:
     label = "Weekdag",
     options = df["Weekdag"].unique())
 
-alle_lkr = sidebar.toggle(label = "Alle leerkrachten", value = True)
+alle_lkr = toggle(label = "Alle leerkrachten", value = True)
 if alle_lkr:
   lkr = list(df["Leerkracht"].unique())
 else:
-  lkr = sidebar.multiselect(
+  lkr = multiselect(
     label = "Leerkracht",
     options = df["Leerkracht"].unique())
 
