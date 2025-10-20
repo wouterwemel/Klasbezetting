@@ -52,5 +52,5 @@ else:
 
 
 # updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht(en) == @lkr & Lokaal == @lokaal")
-updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht(en) == @lkr")
+updated_df = df.query("Datum == @datum & Weekdag == @weekdag")
 dataframe(updated_df)
