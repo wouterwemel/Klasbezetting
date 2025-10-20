@@ -68,5 +68,5 @@ else:
   uitzonderlijk = [False, True]
   
 
-updated_df = df.query("Jaar == @jaar & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
+# updated_df = df.query("Jaar == @jaar & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
 dataframe(updated_df)
