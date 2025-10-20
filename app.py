@@ -17,7 +17,7 @@ title = "Klasbezetting TEST TOOL"
 sidebar.header("Selecteer")
 
 # SETUP SETTINGS
-alle_data = toggle(label = "Alle data", value = True)
+alle_data = sidebar.toggle(label = "Alle data", value = True)
 if alle_data:
   datum = list(df["Datum"].unique())
 else:
@@ -30,11 +30,11 @@ alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
 if alle_weekdagen:
   weekdag = list(df["Weekdag"].unique())
 else:
-  weekdag = sidebar.multiselect(
+  weekdag = multiselect(
     label = "Weekdag",
     options = df["Weekdag"].unique())
 
-alle_lkr = toggle(label = "Alle leerkrachten", value = True)
+alle_lkr = sidebar.toggle(label = "Alle leerkrachten", value = True)
 if alle_lkr:
   lkr = list(df["Leerkracht"].unique())
 else:
@@ -46,7 +46,7 @@ alle_lokalen = sidebar.toggle(label = "Alle lokalen", value = True)
 if alle_lokalen:
   lokaal = list(df["Lokaal"].unique())
 else:
-  lokaal = sidebar.multiselect(
+  lokaal = multiselect(
     label = "Lokaal",
     options = df["Lokaal"].unique())
 
