@@ -19,8 +19,7 @@ sidebar.header("Selecteer")
 
 datum = date_input(
   label = "Datum",
-  format = "DD/MM/YYYY",
-  default = "today")
+  format = "DD/MM/YYYY")
 # jaar = datum.year
 print(type(datum))
 
