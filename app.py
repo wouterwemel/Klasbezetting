@@ -25,7 +25,8 @@ else:
     label = "Datum",
     format = "DD/MM/YYYY",
     value = "today")
-  jaar = datum[2]
+
+jaar = datum.year
 
 alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
 if alle_weekdagen:
