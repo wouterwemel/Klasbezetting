@@ -21,7 +21,8 @@ datum = date_input(
   label = "Datum",
   format = "DD/MM/YYYY")
 # jaar = datum.year
-print(type(datum))
+print(datum)
+
 
 
 # # SETUP SETTINGS
