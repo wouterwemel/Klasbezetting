@@ -36,11 +36,11 @@ else:
 
 alle_lkr = sidebar.toggle(label = "Alle leerkrachten", value = True)
 if alle_lkr:
-  lkr = list(df["Leerkracht(en)"].unique())
+  lkr = list(df["Leerkracht"].unique())
 else:
   lkr = sidebar.multiselect(
-    label = "Leerkracht(en)",
-    options = df["Leerkracht(en)"].unique())
+    label = "Leerkracht",
+    options = df["Leerkracht"].unique())
 
 alle_lokalen = sidebar.toggle(label = "Alle lokalen", value = True)
 if alle_lokalen:
@@ -51,5 +51,5 @@ else:
     options = df["Lokaal"].unique())
 
 
-updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht(en) == @lkr & Lokaal == @lokaal")
+updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal")
 dataframe(updated_df)
