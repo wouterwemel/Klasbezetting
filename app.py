@@ -17,17 +17,25 @@ title = "Klasbezetting TEST TOOL"
 
 sidebar.header("Selecteer")
 
-# SETUP SETTINGS
-alle_data = sidebar.toggle(label = "Alle data", value = True)
-if alle_data:
-  datum1 = list(df["Datum"].unique())
-else:
-  datum2 = date_input(
-    label = "Datum",
-    format = "DD/MM/YYYY",
-    value = "today")
+datum = date_input(
+  label = "Datum",
+  format = "DD/MM/YYYY",
+  value = "today")
 # jaar = datum.year
-print(type(datum2))
+print(type(datum))
+
+
+# # SETUP SETTINGS
+# alle_data = sidebar.toggle(label = "Alle data", value = True)
+# if alle_data:
+#   datum = list(df["Datum"].unique())
+# else:
+#   datum = date_input(
+#     label = "Datum",
+#     format = "DD/MM/YYYY",
+#     value = "today")
+# # jaar = datum.year
+# print(type(datum))
 
 alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
 if alle_weekdagen:
