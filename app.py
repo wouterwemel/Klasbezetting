@@ -60,11 +60,11 @@ else:
 
 alleen_uitzonderlijk = sidebar.toggle(label = "Alleen uitzonderlijk", value = False)
 if alleen_uitzonderlijk:
-  uitzonderlijk = list(df["Uitzonderlijk?"].unique())
+  uitzonderlijk = list(df["Uitzonderlijk"].unique())
 else:
   lokaal = multiselect(
     label = "Uitzonderlijk",
-    options = df["Uitzonderlijk?"].unique())
+    options = df["Uitzonderlijk"].unique())
 
-updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk? == @uitzonderlijk")
+updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
 dataframe(updated_df)
