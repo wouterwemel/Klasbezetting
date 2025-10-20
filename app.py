@@ -70,7 +70,7 @@ if toon_niet_uitzonderlijk:
 else:
   niet_uitzonderlijk = False
 
-wel_en_niet_uitzonderlijk = [uizonderlijk, niet_uitzonderlijk]
+wel_en_niet_uitzonderlijk = [uitzonderlijk, niet_uitzonderlijk]
 
 updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @wel_en_niet_uitzonderlijk")
 dataframe(updated_df)
