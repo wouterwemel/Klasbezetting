@@ -20,7 +20,7 @@ sidebar.header("Selecteer")
 datum = date_input(
   label = "Datum",
   format = "DD/MM/YYYY")
-# jaar = datum.year
+jaar = datum.year
 print(datum)
 
 
