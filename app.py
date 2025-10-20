@@ -51,6 +51,5 @@ else:
     options = df["Lokaal"].unique())
 
 
-# updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht(en) == @lkr & Lokaal == @lokaal")
-updated_df = df.query("Datum == @datum & Weekdag == @weekdag")
+updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht(en) == @lkr & Lokaal == @lokaal")
 dataframe(updated_df)
