@@ -1,5 +1,6 @@
 from streamlit import *
 from pandas import *
+from datetime import day, month, year
 import json
 
 # SETUP DATAFRAME
@@ -25,7 +26,7 @@ else:
     label = "Datum",
     format = "DD/MM/YYYY",
     value = "today")
-jaar = datum["YYYY"]
+jaar = datum.year
 
 alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
 if alle_weekdagen:
