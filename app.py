@@ -68,4 +68,4 @@ else:
 
 updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
 dataframe(data = updated_df,
-         height = 800)
+         height = 600)
