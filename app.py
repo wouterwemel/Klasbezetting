@@ -50,6 +50,13 @@ else:
     label = "Lokaal",
     options = df["Lokaal"].unique())
 
+alle_type = sidebar.toggle(label = "Alle type", value = True)
+if alle_type:
+  type = list(df["Type"].unique())
+else:
+  type = multiselect(
+    label = "Type",
+    options = df["Type"].unique())
 
-updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal")
+updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type")
 dataframe(updated_df)
