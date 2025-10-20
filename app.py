@@ -58,8 +58,8 @@ else:
     label = "Type",
     options = df["Type"].unique())
 
-allen_uitzonderlijk = sidebar.checkbox(label = "Toon alleen uitzonderlijk", value = False)
-if allen_uitzonderlijk:
+alleen_uitzonderlijk = sidebar.checkbox(label = "Toon alleen uitzonderlijk", value = False)
+if alleen_uitzonderlijk:
   uitzonderlijk = True
 else:
   uitzonderlijk = [False, True]
