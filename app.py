@@ -17,25 +17,15 @@ title = "Klasbezetting TEST TOOL"
 
 sidebar.header("Selecteer")
 
-datum = date_input(
-  label = "Datum",
-  format = "DD/MM/YYYY")
-jaar = datum.year
-print(datum)
-
-
-
-# # SETUP SETTINGS
-# alle_data = sidebar.toggle(label = "Alle data", value = True)
-# if alle_data:
-#   datum = list(df["Datum"].unique())
-# else:
-#   datum = date_input(
-#     label = "Datum",
-#     format = "DD/MM/YYYY",
-#     value = "today")
-# # jaar = datum.year
-# print(type(datum))
+# SETUP SETTINGS
+alle_data = sidebar.toggle(label = "Alle data", value = True)
+if alle_data:
+  datum = list(df["Datum"].unique())
+else:
+  datum = date_input(
+    label = "Datum",
+    format = "DD/MM/YYYY",
+    value = "today")
 
 alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
 if alle_weekdagen:
@@ -76,5 +66,5 @@ else:
   uitzonderlijk = [False, True]
   
 
-# updated_df = df.query("Jaar == @jaar & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
+updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
 dataframe(updated_df)
