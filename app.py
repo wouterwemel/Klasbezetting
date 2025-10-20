@@ -58,19 +58,12 @@ else:
     label = "Type",
     options = df["Type"].unique())
 
-toon_uitzonderlijk = sidebar.checkbox(label = "Toon uitzonderlijk", value = True)
+allen_uitzonderlijk = sidebar.checkbox(label = "Toon alleen uitzonderlijk", value = False)
 if toon_uitzonderlijk:
   uitzonderlijk = True
 else:
-  uitzonderlijk = False
+  uitzonderlijk = [False, True]
   
-toon_niet_uitzonderlijk = sidebar.checkbox(label = "Toon niet uitzonderlijk", value = True)
-if toon_niet_uitzonderlijk:
-  niet_uitzonderlijk = True
-else:
-  niet_uitzonderlijk = False
 
-wel_en_niet_uitzonderlijk = [uitzonderlijk, niet_uitzonderlijk]
-
-updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @wel_en_niet_uitzonderlijk")
+updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
 dataframe(updated_df)
