@@ -1,6 +1,6 @@
 from streamlit import *
 from pandas import *
-from datetime import date
+import datetime
 import json
 
 # SETUP DATAFRAME
