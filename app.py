@@ -66,6 +66,6 @@ else:
   uitzonderlijk = [False, True]
   
 
-updated_df = df.query("Datum_kort == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
+# updated_df = df.query("Datum_kort == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
 dataframe(data = updated_df,
          height = 600)
