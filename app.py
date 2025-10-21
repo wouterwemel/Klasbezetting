@@ -20,7 +20,7 @@ sidebar.header("Selecteer")
 # SETUP SETTINGS
 alle_data = sidebar.toggle(label = "Alle data", value = True)
 if alle_data:
-  datum = list(df["Datum"].unique())
+  datum = list(df["Datum_kort"].unique())
 else:
   datum = date_input(
     label = "Datum",
@@ -66,6 +66,6 @@ else:
   uitzonderlijk = [False, True]
   
 
-updated_df = df.query("Datum == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
+updated_df = df.query("Datum_kort == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
 dataframe(data = updated_df,
          height = 600)
