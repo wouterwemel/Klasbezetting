@@ -26,6 +26,7 @@ else:
     label = "Datum",
     format = "DD/MM/YYYY",
     value = "today")
+datum_kort = str(datum)
 
 alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
 if alle_weekdagen:
@@ -65,6 +66,6 @@ if alleen_uitzonderlijk:
 else:
   uitzonderlijk = [False, True]
   
-updated_df = df.query("Datum_kort == @datum & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
+updated_df = df.query("Datum_kort == @datum_kort & Weekdag == @weekdag & Leerkracht == @lkr & Lokaal == @lokaal & Type == @type & Uitzonderlijk == @uitzonderlijk")
 dataframe(data = updated_df,
          height = 600)
