@@ -20,13 +20,13 @@ sidebar.header("Selecteer")
 # SETUP SETTINGS
 alle_data = sidebar.toggle(label = "Alle data", value = True)
 if alle_data:
-  datum = list(df["Datum_kort"].unique())
+  datum_kort = list(df["Datum_kort"].unique())
 else:
   datum = date_input(
     label = "Datum",
     format = "DD/MM/YYYY",
     value = "today")
-datum_kort = str(datum)
+  datum_kort = str(datum)
 
 alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
 if alle_weekdagen:
