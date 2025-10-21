@@ -24,7 +24,7 @@ if alle_data:
 else:
   datum = date_input(
     label = "Datum",
-    format = "D/MM/YYYY",
+    format = "DD/MM/YYYY",
     value = "today")
 
 alle_weekdagen = sidebar.toggle(label = "Alle weekdagen", value = True)
